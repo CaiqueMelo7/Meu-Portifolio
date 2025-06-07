@@ -1,0 +1,50 @@
+@media (max-width:768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    .meus-projetos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixas-projetos {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .seta-esquerda,
+    .seta-direita {
+        margin: 10px auto 0;
+        position: relative;
+    
+    }
+
+    .seta-esquerda::before {
+        transform: translate(-50%, -50%) rotate(45deg) !important;
+
+    }
+
+    .seta-direita::before {
+        transform: translate(-50%, -50%) rotate(135deg) !important;
+    }
+
+    .meus-projetos::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0;
+
+    }
+
+    .meus-projetos .seta-esquerda,
+    .meus-projetos .seta-direita {
+        display: inline-block;
+    }
+
+    .descricao-projeto {
+        box-sizing: border-box;
+    }
+
+}

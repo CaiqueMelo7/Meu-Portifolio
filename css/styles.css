@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Aqui eu fiz um scroll para rolar para as sections de forma suave, deixando agradável ao usuário.*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+.menu-lateral {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: transparent;
+    z-index: 1000;
+}
+
+.menu-navegacao a {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 30px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao a:focus {
+    background-color: #0a3d62;
+    color: #f1c40f;
+    transform: scale(1.15);
+    outline: none;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.intro {
+    background: linear-gradient(to right, #0a3d62 0%, #3c8dbf 50%, #0a3d62 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* Aqui para deixar a minha foto dentro de um circulo com leve sombra */
+
+.intro img {
+    margin-top: 40px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.nome h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 20px;
+
+}
+
+.nome h3 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 300px;
+}
+
+.redes-sociais a {
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    transition: transform 0.2s;
+
+}
+
+/* Animação para os ícones para aumentar e mudar de cor */
+
+.redes-sociais a:hover {
+    transform: scale(1.2);
+    color: #f1c40f;
+}
+
+#Sobre-mim {
+    padding: 1px;
+    margin-top: 0px;
+    background-color: #a0d7e6;
+    color: #0a3d62;
+    border-left: 5px solid #f1c40f;
+    border-right: 5px solid #f1c40f;
+}
+
+#Sobre-mim h3,
+#Sobre-mim p {
+
+    text-align: center;
+    margin: 5px;
+}
+
+#Sobre-mim h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+#Sobre-mim p {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+    line-height: 1.5;
+    font-size: 1.3rem;
+}
+
+
+.skills-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.skills-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #0a3d62;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-btn {
+    margin-bottom: 40px;
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-btn:hover {
+    background-color: #3c8dbf;
+    transform: scale(1.1);
+}
+
+.soft-skills h3 {
+    margin-top: 40px;
+}
+
+#projetos {
+    padding: 60px 20px;
+    color: #0a3d62;
+    background: linear-gradient(to right, #041420 0%, #4bc8f2 50%, #041420 100%);
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+
+/* Container principal */
+.meus-projetos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  
+}
+
+/* Setas esquerda e direita */
+.seta-esquerda,
+.seta-direita {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+.seta-esquerda::before,
+.seta-direita::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  padding: 10px;
+  transform: translateY(-50%);
+}
+
+.seta-esquerda::before {
+  left: 0;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.seta-direita::before {
+  right: 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Área dos três projetos */
+.caixas-projetos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo dos quadrados */
+.projeto-lateral,
+.projeto-central {
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.projeto-central {
+  transform: scale(1.2);
+  z-index: 2;
+  transform: transform 0.3s ease;
+}
+
+.projeto-central:hover {
+  transform: scale(1.3);
+}
+
+
+.projeto-lateral {
+  transform: scale(0.8);
+  opacity: 0.6;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.projeto-lateral:hover {
+  transform: scale(0.9); /* aumenta, mas não ultrapassa o central */
+  opacity: 1;
+}
+
+/* Garantir tamanho das imagens */
+.projeto-central img,
+.projeto-lateral img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  max-width: 300px; /* ajuste como quiser */
+}
+
+
+.descricao-projeto {
+
+    margin-top: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.descricao-item {
+    margin: 100px;
+    margin-top: 30px;
+    display: none;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid rgb(149, 143, 143);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    background-color: #73c8ef;
+    margin-bottom: 10px;
+}
+
+.descricao-item.ativa {
+    display: block;
+}
+
+.descricao-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.descricao-item p {
+    font-size: 17px;
+}
+
+#projetos footer {
+    color: #111111;
+    width: 60%;
+    margin: 40px auto 0 auto;
+    border-top: 1px solid #0a3d62;
+    padding-top: 20px;
+    margin-top: 100px;
+    font-size: 15px;
+
+}
